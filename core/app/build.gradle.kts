@@ -48,6 +48,27 @@ tasks.configureEach {
     }
 }
 
+val createDesugarFolder = tasks.register("createDesugarFolder") {
+    doLast {
+        val paths = listOf(
+            "build/intermediates/external_file_lib_dex_archives/debug/desugarDebugFileDependencies",
+            "build/intermediates/external_file_lib_dex_archives/release/desugarReleaseFileDependencies"
+        )
+        paths.forEach { path ->
+            val dir = file(path)
+            if (!dir.exists()) {
+                dir.mkdirs()
+            }
+        }
+    }
+}
+
+tasks.configureEach {
+    if (name.startsWith("mergeExtDex")) {
+        dependsOn(createDesugarFolder)
+    }
+}
+
 configurations.all {
   resolutionStrategy {
     force("com.google.guava:guava:32.1.3-android")
