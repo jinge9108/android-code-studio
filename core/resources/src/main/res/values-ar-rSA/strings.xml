@@ -450,12 +450,12 @@
   <string name="updater_target_version_code">رمز الإصدار المستهدف: %d</string>
   <string name="updater_available_variants">المتغيرات المتاحة: %s</string>
   <string name="updater_preparing_download">جاري التحضير للتنزيل...</string>
-  <string name="updater_progress_format">%d ميجابايت / %d ميجابايت</string>
-  <string name="updater_enable_install_permission">يرجى تمكين 'تثبيت التطبيقات غير المعروفة' والمحاولة مرة أخرى</string>
+  <string name="updater_progress_format">%1$d ميجابايت / %2$d ميجابايت</string>
+  <string name="updater_enable_install_permission">يرجى تمكين \'تثبيت التطبيقات غير المعروفة\' والمحاولة مرة أخرى</string>
   <string name="updater_http_error">خطأ HTTP: %d</string>
   <string name="updater_fetch_error">خطأ في جلب معلومات التحديث</string>
   <string name="updater_parse_error">خطأ في تحليل معلومات التحديث</string>
-  <string name="updater_version_check_log">الإصدار الحالي: %d، الإصدار المتاح: %d للبنية: %s</string>
+  <string name="updater_version_check_log">الإصدار الحالي: %1$d، الإصدار المتاح: %2$d للبنية: %3$s</string>
   <string name="updater_no_compatible_variant">لم يتم العثور على متغير متوافق للبنية: %s</string>
   <string name="updater_package_not_found">الحزمة غير موجودة</string>
   <string name="updater_supported_abis">ABIs المدعومة: %s</string>
