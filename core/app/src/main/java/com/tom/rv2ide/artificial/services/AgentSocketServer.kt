@@ -107,7 +107,7 @@ class AgentSocketServer {
                         val opened = withContext(Dispatchers.Main) {
                             val activity = IDEApplication.instance.getCurrentActivity()
                             if (activity is EditorHandlerActivity) {
-                                val selection = if (line > 0) Range(line - 1, 0, line - 1, 0) else null
+                                val selection = if (line > 0) Range.pointRange(line - 1, 0) else null
                                 activity.openFile(file, selection)
                                 true
                             } else {
