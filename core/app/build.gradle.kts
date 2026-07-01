@@ -48,7 +48,7 @@ tasks.configureEach {
     }
 }
 
-val createDesugarFolder = tasks.register("createDesugarFolder") {
+val createExtDexDependencies = tasks.register("createExtDexDependencies") {
     doLast {
         val paths = listOf(
             "build/intermediates/external_file_lib_dex_archives/debug/desugarDebugFileDependencies",
@@ -65,7 +65,7 @@ val createDesugarFolder = tasks.register("createDesugarFolder") {
 
 tasks.configureEach {
     if (name.startsWith("mergeExtDex")) {
-        dependsOn(createDesugarFolder)
+        dependsOn(createExtDexDependencies)
     }
 }
 
